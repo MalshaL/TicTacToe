@@ -18,7 +18,7 @@ public class TicTacToe {
     
     int[][] currentState = gameLauncher.getState();
 
-    public int checkWin(int x, int y) {
+    public void checkWin(int x, int y) {
         for (int i = x - 1; i <= x + 1; i++) {
             System.out.println(i);
             if (i >= 0 && i <= 2) {
@@ -30,7 +30,7 @@ public class TicTacToe {
                                 if ((2 * i - x >= 0 && 2 * i - x <= 2) && (2 * j - y >= 0 && 2 * j - y <= 2)) {
                                     if (currentState[i][j] == currentState[2 * i - x][2 * j - y]) {
                                         System.out.println("Print you win" + i + " " + j);
-                                        return currentState[i][j];
+                                
                                         
                                     }
 
@@ -38,7 +38,7 @@ public class TicTacToe {
                                     if ((2 * x - i >= 0 && 2 * x - i <= 2) && (2 * y - j >= 0 && 2 * y - j <= 2)) {
                                         if (currentState[i][j] == currentState[2 * x - i][2 * y - j]) {
                                             System.out.println("Print you win" + i + " " + j);
-                                           return currentState[i][j] ;
+                                        
                                         }
                                     }
                                 }
@@ -49,6 +49,6 @@ public class TicTacToe {
                 }
             }
         }
-      return 0;
+     
     }
 }
